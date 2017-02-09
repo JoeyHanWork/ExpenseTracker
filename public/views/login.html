@@ -1,0 +1,43 @@
+<div class="container login-panel panel">
+    <ul class="nav nav-tabs nav-justified" style="background-color: #0C3947">
+        <li class="active"><a data-toggle="tab" href="#User">User</a></li>
+        <li ><a data-toggle="tab" href="#Admin">Admin</a></li>
+    </ul>
+    <div class="tab-content login-inside-panel">
+        <div id="User" class="tab-pane fade in active">
+            <h5 class="col-sm-12 page-header" style="color: #3E6B8A">LOGIN AS USER</h5>
+
+            <form role="form" ng-submit="login()">
+            <div class="form-group has-feedback">
+              <input class="form-control input-lg" type="text" name="email" ng-model="email" placeholder="Email" required autofocus>
+            </div>
+
+            <div class="form-group has-feedback">
+              <input class="form-control input-lg" type="password" name="password" ng-model="password" placeholder="Password" required>
+            </div>
+                <div class="form-inline text-center">
+                    <button type="submit" class="btn btn-primary">Login</button>
+                </div>
+            </form>
+        </div>
+        <div id="Admin" class="tab-pane fade">
+
+            <h5 class="col-sm-12 page-header" style="color: #3E6B8A">LOGIN AS ADMIN</h5>
+
+            <form role="form" ng-submit="adminLogin()">
+            <div class="form-group has-feedback">
+              <input class="form-control input-lg" type="text" name="email" ng-model="email" placeholder="Email" required autofocus>
+            </div>
+
+            <div class="form-group has-feedback">
+              <input class="form-control input-lg" type="password" name="password" ng-model="password" placeholder="Password" required>
+            </div>
+                <div class="form-inline text-center">
+                    <button type="submit" class="btn btn-primary">Login</button>
+                </div>
+            </form>
+
+        </div>
+    </div>
+
+</div>

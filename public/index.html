@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <base href="/">
+  <meta charset="utf-8">
+  <title>Expense Tracker</title>
+
+  <link rel="stylesheet" href="lib/bootstrap.min.css">
+  <script src="lib/jquery.min.js"></script>
+  <script src="lib/bootstrap.min.js"></script>
+  <script src="//ajax.googleapis.com/ajax/libs/angularjs/1.5.3/angular.js"></script>
+  <script src="//ajax.googleapis.com/ajax/libs/angularjs/1.5.3/angular-animate.js"></script>
+  <script src="//angular-ui.github.io/bootstrap/ui-bootstrap-tpls-1.3.3.js"></script>
+  <link href="//netdna.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" rel="stylesheet">
+
+</head>
+<body ng-app="sampleApp">
+
+<nav class="navbar navbar-inverse">
+    <div class="container-fluid">
+        <ul class="nav navbar-nav navbar-right">
+            <li data-match-route="/login"><a href="/login">Login</a></li>
+            <li data-match-route="/signup"><a href="/signup">Sign up</a></li>
+            <li><a href="/login" ng-click="logout()">Logout</span></a></li>
+        </ul>
+    </div>
+</nav>
+
+<div ng-view></div>
+
+
+<script src="lib/angular.min.js"></script>
+<script src="lib/angular-route.min.js"></script>
+<script src="vendor/angular-resource.js"></script>
+<script src="/vendor/angular-messages.js"></script>
+<script src="/app.js"></script>
+<script src="/controllers/operation.js"></script>
+<script src="/controllers/detail.js"></script>
+<script src="/controllers/add.js"></script>
+<script src="/controllers/login.js"></script>
+<script src="/controllers/signup.js"></script>
+<script src="/controllers/show.js"></script>
+<script src="/services/auth.js"></script>
+<script src="/services/show.js"></script>
+<script src="/services/update.js"></script>
+<script src="/services/delete.js"></script>
+<script src="/services/search.js"></script>
+<script src="/services/findAll.js"></script>
+<script src="/datetimepicker.js"></script>
+
+</body>
+</html>

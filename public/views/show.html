@@ -1,0 +1,17 @@
+<div class="container">
+    <div class="panel panel-default">
+        <div class="panel-body">
+            <div class="row show-list">
+                <div class="fade-repeat col-xs-4 col-md-3" ng-repeat="expense in expenses">
+                    <div class="text-center">
+                        <p>email: {{expense.email}}</p>
+                        <p>time: {{expense.time}}</p>
+                        <p>amount: {{expense.amount}}</p>
+                        <p>descrip: {{expense.descrip}}</p>
+                    </div>
+                     <hr/>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

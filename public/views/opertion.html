@@ -1,0 +1,53 @@
+<div class="container">
+
+    <div class="form-group col-sm-12">
+            <label for="sdate">Start</label>
+            <div class="col-sm-10">
+                <p class="input-group">
+                <input type="text" class="form-control" id="sdate" name="sdate" uib-datepicker-popup ng-model="stime" is-open="popup2.opened" datepicker-options="dateOptions" ng-required="true" close-text="Close" />
+                     <span class="input-group-btn">
+                        <button type="button" class="btn btn-default" ng-click="open2()"><i class="glyphicon glyphicon-calendar"></i></button>
+                    </span>
+            </p>
+            </div>
+    </div>
+
+    <div class="form-group col-sm-12">
+            <label for="edate">End</label>
+            <div class="col-sm-10">
+                <p class="input-group">
+                <input type="text" class="form-control" id="edate" name="edate" uib-datepicker-popup ng-model="etime" is-open="popup1.opened" datepicker-options="dateOptions" ng-required="true" close-text="Close" />
+                     <span class="input-group-btn">
+                        <button type="button" class="btn btn-default" ng-click="open1()"><i class="glyphicon glyphicon-calendar"></i></button>
+                    </span>
+            </p>
+            </div>
+    </div>
+
+    <button ng-click="search()" class="btn btn-primary">
+        Search
+    </button>
+
+    <div class="panel panel-default">
+        <div class="panel-heading">
+        <p>email: {{email}}</p>
+        </div>
+
+        <div class="panel-body">
+            <div class="row show-list">
+                <div class="fade-repeat col-xs-4 col-md-3" ng-repeat="expense in expenses">
+                    <div class="text-center">
+                        <p>time: {{expense.time}}</p>
+                        <p>amount: {{expense.amount}}</p>
+                        <p>descrip: {{expense.descrip}}</p>
+                        <a href="/shows/{{expense._id}}">Update</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <a href="/add/{{email}}">Add</a>
+        <div ng-show="isAdmin()">
+            <a href="/showAll">show all expenses</a>
+        </div>
+    </div>
+</div>
